@@ -1,13 +1,13 @@
-export interface Movie {
+export interface Favorite {
   id: number;
   original_title: string;
-  favorited: boolean;
+  isFavorited: boolean;
 }
 
 export interface User {
   id: number;
   email: string;
-  favorites: Movie[];
+  favorites: Favorite[];
 }
 
 export interface Session {
