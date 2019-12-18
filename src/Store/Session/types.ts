@@ -10,3 +10,7 @@ export interface User {
   favorites: Movie[];
 }
 
+export interface Session {
+  loggedIn: boolean;
+  user: User;
+}
