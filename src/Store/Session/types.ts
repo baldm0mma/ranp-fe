@@ -4,3 +4,9 @@ export interface Movie {
   favorited: boolean;
 }
 
+export interface User {
+  id: number;
+  email: string;
+  favorites: Movie[];
+}
+
