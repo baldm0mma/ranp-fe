@@ -1,6 +1,6 @@
 export interface Favorite {
   id: number;
-  original_title: string;
+  title: string;
   isFavorited: boolean;
 }
 
