@@ -1,13 +1,13 @@
 export interface Favorite {
   id: number;
-  title: string;
   isFavorited: boolean;
+  title: string;
 }
 
 export interface User {
-  id: number;
   email: string;
   favorites: Favorite[];
+  id: number;
 }
 
 export interface Session {

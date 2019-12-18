@@ -1,8 +1,9 @@
 export interface Movie {
   id: number;
-  title: string;
+  isFavorited: boolean;
   overview: string;
   poster_path: string;
   release_date: string;
   runtime: number;
+  title: string;
 }
