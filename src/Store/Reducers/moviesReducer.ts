@@ -1,8 +1,8 @@
 import { Movie } from "../Types/movieTypes";
 
-const defaultMovieState: Movie[] = [];
+const defaultMoviesState: Movie[] = [];
 
-export const movieReducer = (state = defaultMovieState, action) => {
+export const moviesReducer = (state = defaultMoviesState, action) => {
   switch (action.type) {
     case "SET_MOVIES":
       return action.movies;
