@@ -1,4 +1,5 @@
 export interface Favorite {
+  createdAt: number;
   id: number;
   isFavorited: boolean;
   title: string;
@@ -14,3 +15,4 @@ export interface Session {
   loggedIn: boolean;
   user: User;
 }
+
