@@ -1,4 +1,4 @@
-import { Session, User, Favorite } from "../Types/sessionTypes";
+import { Session } from "../Types/sessionTypes";
 import { SessionActionTypes } from "../Types/actionTypes";
 
 const defaultSessionState: Session = {
