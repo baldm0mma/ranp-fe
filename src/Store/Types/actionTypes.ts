@@ -1,4 +1,5 @@
 import { Movie } from "./movieTypes";
+import { Favorite } from "./sessionTypes";
 
 // export const SET_SESSION = "SET_SESSION";
 export const SET_MOVIES = "SET_MOVIES";
@@ -12,11 +13,10 @@ export interface SetMoviesAction {
 
 export type MovieActionTypes = SetMoviesAction;
 
-
 // Session Action Types
 export interface ToggleFavoriteAction {
   type: typeof TOGGLE_FAVORITE;
-  id: number;
+  favorite: Favorite;
 }
 
 export type SessionActionTypes = ToggleFavoriteAction;

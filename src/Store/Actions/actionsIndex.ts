@@ -1,4 +1,5 @@
 import { Movie } from "../Types/movieTypes";
+import { Favorite } from "../Types/sessionTypes";
 import { AppActions } from "../Types/actionTypes";
 
 export const setMovies = (movies: Movie[]): AppActions => ({
@@ -6,7 +7,7 @@ export const setMovies = (movies: Movie[]): AppActions => ({
   movies
 });
 
-export const toggleFavorite = (id: string): AppActions => ({
+export const toggleFavorite = (favorite: Favorite): AppActions => ({
   type: "TOGGLE_FAVORITE",
-  id
+  favorite
 });

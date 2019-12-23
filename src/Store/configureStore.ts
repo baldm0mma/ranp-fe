@@ -1,11 +1,11 @@
 import { createStore, combineReducers } from "redux";
-import { composeWithDevTools } from "redux-devtools-extention";
+import { composeWithDevTools } from "redux-devtools-extension";
 import { sessionReducer } from "./Reducers/sessionReducer";
-import { movieReducer } from "./Reducers/movieReducer";
+import { moviesReducer } from "./Reducers/moviesReducer";
 
 export const rootReducer = combineReducers({
   session: sessionReducer,
-  movies: movieReducer
+  movies: moviesReducer
 });
 
-export const store = createStore(rootReducer, composeWithDevTools();
+export const store = createStore(rootReducer, composeWithDevTools());
