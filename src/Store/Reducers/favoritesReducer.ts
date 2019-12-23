@@ -1,11 +1,8 @@
 import { Favorite } from "../Types/sessionTypes";
 
-const defaultFavoritesState: Favorite[] = [];
+const defaultSessionState: Favorite[] = [];
 
-export const toggleFavoritesReducer = (
-  state = defaultFavoritesState,
-  action
-) => {
+export const sessionReducer = (state = defaultSessionState, action) => {
   switch (action.type) {
     case "TOGGLE_FAVORITE":
       return [...state, action.id];
