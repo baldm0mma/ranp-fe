@@ -7,7 +7,12 @@ export const setMovies = (movies: Movie[]): AppActions => ({
   movies
 });
 
-export const toggleFavorite = (favorite: Favorite): AppActions => ({
-  type: "TOGGLE_FAVORITE",
+export const addFavorite = (favorite: Favorite): AppActions => ({
+  type: "ADD_FAVORITE",
   favorite
+});
+
+export const removeFavorite = (id: number): AppActions => ({
+  type: "REMOVE_FAVORITE",
+  id
 });

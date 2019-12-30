@@ -15,17 +15,10 @@ export const sessionReducer = (
   action: SessionActionTypes
 ): Session => {
   switch (action.type) {
-    case "TOGGLE_FAVORITE":
-      if (
-        state.user.favorites.map(fav => fav.movieId === action.favorite.movieId)
-      ) {
-        state.user.favorites.filter(
-          fav => fav.movieId !== action.favorite.movieId
-        );
-      } else {
-        state.user.favorites.push(action.favorite);
-      }
-      return state;
+    case "ADD_FAVORITE":
+      return [...state, action.favorite];
+    case "REMOVE_FAVORITE":
+      return state.user.favorites.filter(fav => fav.movieId !== action.id);
     default:
       return state;
   }
