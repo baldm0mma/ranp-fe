@@ -1,5 +1,5 @@
 export interface Movie {
-  id: number;
+  movieId: number;
   isFavorited: boolean;
   overview: string;
   poster_path: string;

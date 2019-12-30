@@ -8,4 +8,6 @@ export const rootReducer = combineReducers({
   movies: moviesReducer
 });
 
+export type AppState = ReturnType<typeof rootReducer>;
+
 export const store = createStore(rootReducer, composeWithDevTools());

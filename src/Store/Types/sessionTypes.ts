@@ -1,13 +1,13 @@
 export interface Favorite {
   createdAt: number;
-  id: number;
+  movieId: number;
   title: string;
 }
 
 export interface User {
   email: string;
+  userId: number;
   favorites: Favorite[];
-  id: number;
 }
 
 export interface Session {

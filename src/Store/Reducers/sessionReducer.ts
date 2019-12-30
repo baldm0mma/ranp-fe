@@ -4,8 +4,8 @@ import { SessionActionTypes } from "../Types/actionTypes";
 const defaultSessionState: Session = {
   loggedIn: false,
   user: {
-    email: '',
-    id: 0,
+    email: "",
+    userId: 0,
     favorites: []
   }
 };
@@ -16,7 +16,15 @@ export const sessionReducer = (
 ): Session => {
   switch (action.type) {
     case "TOGGLE_FAVORITE":
-      state.user.favorites.push(action.favorite)
+      if (
+        state.user.favorites.map(fav => fav.movieId === action.favorite.movieId)
+      ) {
+        state.user.favorites.filter(
+          fav => fav.movieId !== action.favorite.movieId
+        );
+      } else {
+        state.user.favorites.push(action.favorite);
+      }
       return state;
     default:
       return state;
