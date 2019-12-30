@@ -25,7 +25,7 @@ export interface RemoveFavoriteAction {
   id: number;
 }
 
-export type SessionActionTypes = ToggleFavoriteAction;
+export type SessionActionTypes = AddFavoriteAction | RemoveFavoriteAction;
 
 // Export All Action Types
 export type AppActions = MovieActionTypes | SessionActionTypes;
