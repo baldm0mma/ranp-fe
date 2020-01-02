@@ -5,7 +5,7 @@ const pageNum = 1;
 
 export const getMovies = async () => {
   try {
-    const response = fetch(
+    const response = await fetch(
       `https://api.themoviedb.org/3/movie/popular?api_key=${APIKey}&language=en-US&page=${pageNum}`
     );
     const parsedMovies = await response.json();
