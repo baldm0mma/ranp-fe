@@ -1,9 +1,27 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { connect } from "react-redux";
+import { getMovies } from "../Utilities/APICalls";
+import { setMovies } from "../Store/Actions/actionsIndex";
 import "./App.css";
-const v3ApiKey = process.env.REACT_APP_V3_AUTH_API_KEY;
 
-const App: React.FC = () => {
-  return <div className="App">{v3ApiKey}</div>;
+const App: React.FC = props => {
+  useEffect(() => {
+    const onLoad = async () => {
+      const popularMovies = await getMovies();
+      props.setMovies(popularMovies);
+    };
+  }, []);
+  return <div className="App">"Hi there!"</div>;
 };
 
-export default App;
+
+
+export const mapStateToProps = ({ movies }) => ({
+  movies
+});
+
+export const mapDispatchToProps = dispatch => ({
+  setMovies: movies => dispatch(setMovies(movies))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
