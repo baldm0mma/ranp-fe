@@ -1,7 +1,7 @@
 export const movieScrubber = movies => {
   return movies.map(movie => {
     const { id, overview, poster_path, release_date, runtime, title } = movie;
-    return scrubbedMovie = {
+    const scrubbedMovie = {
       movieId: id,
       isFavorited: false,
       overview,
@@ -10,5 +10,6 @@ export const movieScrubber = movies => {
       runtime,
       title
     };
+    return scrubbedMovie;
   });
 };
