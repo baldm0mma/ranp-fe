@@ -7,7 +7,8 @@ const defaultSessionState: Session = {
     email: "",
     userId: 0,
     favorites: []
-  }
+  },
+  error: ""
 };
 
 export const sessionReducer = (
@@ -20,6 +21,9 @@ export const sessionReducer = (
       return state;
     case "REMOVE_FAVORITE":
       state.user.favorites.filter(fav => fav.movieId !== action.id);
+      return state;
+    case "SET_ERROR_MESSAGE":
+      state.error = action.error;
       return state;
     default:
       return state;

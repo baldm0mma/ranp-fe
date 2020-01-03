@@ -3,6 +3,7 @@ import { Favorite } from "./sessionTypes";
 
 // export const SET_SESSION = "SET_SESSION";
 export const SET_MOVIES = "SET_MOVIES";
+export const SET_ERROR_MESSAGE = "SET_ERROR_MESSAGE"
 export const ADD_FAVORITE = "ADD_FAVORITE";
 export const REMOVE_FAVORITE = "REMOVE_FAVORITE";
 
@@ -25,7 +26,12 @@ export interface RemoveFavoriteAction {
   id: number;
 }
 
-export type SessionActionTypes = AddFavoriteAction | RemoveFavoriteAction;
+export interface SetErrorMessageAction {
+  type: typeof SET_ERROR_MESSAGE;
+  error: string;
+}
+
+export type SessionActionTypes = AddFavoriteAction | RemoveFavoriteAction | SetErrorMessageAction;
 
 // Export All Action Types
 export type AppActions = MovieActionTypes | SessionActionTypes;

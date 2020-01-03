@@ -12,10 +12,6 @@ export const getMovies = async () => {
     const scrubbedMovies = await movieScrubber(parsedMovies.results);
     return scrubbedMovies;
   } catch (error) {
-    const caughtError = {
-      message: error.message,
-      status: error.status
-    };
-    return caughtError;
+    return error.message;
   }
 };

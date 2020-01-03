@@ -7,6 +7,11 @@ export const setMovies = (movies: Movie[]): AppActions => ({
   movies
 });
 
+export const setErrorMessage = (error: string): AppActions => ({
+  type: "SET_ERROR_MESSAGE",
+  error
+})
+
 export const addFavorite = (favorite: Favorite): AppActions => ({
   type: "ADD_FAVORITE",
   favorite
